@@ -516,7 +516,7 @@ sub existing_table_names
 {
     my ($caller,$dbh) = @_;
     $dbh ||= $caller->dbh();
-    my $rv = $dbh->selectcol_arrayref('SELECT table_name FROM user_tables ORDER BY table_name');
+    my $rv = $dbh->selectcol_arrayref('SELECT DISTINCT table_name FROM user_tab_columns ORDER BY table_name');
     return undef if $dbh->err;
     return $rv;
 }

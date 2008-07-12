@@ -10,7 +10,7 @@ use DBIx::IO::GenLib ();
 
 use vars qw($VERSION);
 
-$VERSION = '1.06';
+$VERSION = '1.07';
 
 =head1 NAME
 
